@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static('/src/public'))
 app.use(session({
     store: connectMongo.create({
-        mongoUrl: 'mongodb+srv://Francol11:Francol11@cluster0.sfltl.mongodb.net/',
+        mongoUrl: mongoUrl,
         dbName: 'session',
         ttl: 3600
     }),
